@@ -1,0 +1,264 @@
+  @import url(https://fonts.googleapis.com/css?family=Roboto);
+      
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%; }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: black;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+        box-sizing: border-box;
+      }
+      
+      header {
+        background-image: linear-gradient(to right bottom, rgba(0, 0, 102, 0.6), rgba(40, 180, 133, 0.4)), url(images/headerPic.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);      
+/*
+        -webkit-clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
+        clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);*/
+      }
+
+      .logo{
+        filter: invert(100%);
+        position: absolute;
+        top: 25%;
+        left: 67%;
+      }
+
+      a:hover > .logo{
+        filter: invert(0%);      }
+
+      .heading-main {
+        color: #fff;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 6rem; 
+      }
+
+      .header-content-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(10%, -20%);
+        text-align: center; 
+      }
+
+      .heading-one {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+      }
+
+      .heading-two, .heading-three{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 1.5rem;
+      }
+
+      /*.space-top-section{
+        padding-top: 1rem;
+      }*/
+
+      .main-box{
+        background: #F0F2F0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+       } 
+
+      .portfolio-box{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+
+      }
+
+      .portfolio-box > div{
+        margin: 1rem 1rem 4rem 1rem;  /* will result gap between divs*/
+      }
+
+      .port-title{
+        padding: 2rem 0 0 4rem;
+        text-transform: uppercase;
+        color: rgb(0, 0, 30);
+      }
+
+     .port-title:after {
+        content: '';
+        border-bottom:1px solid #000;
+        display: block;
+        position: absolute;
+        right: 5px;
+      }
+
+      .content{
+        width: 30%;
+        height: 30vh;
+
+      }
+
+      .content img {
+        display: block;
+        max-width:100%;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      }
+      
+
+      footer{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+      }
+
+      .social a{
+        text-decoration: none;
+        margin: 20px 20px 0 5px;
+        font-size: 3em;
+        color: black;
+      }
+
+      .social a:hover{
+        color: #7EF9FF;
+      }
+
+      .copyright{
+        font-size: .5em;  
+      }
+
+      .copyright p a{
+        color: black;
+        text-decoration: none;
+      }
+
+      .project-label{
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      /*MEDIA QUERIES - RESPONSIVENESS*/
+
+
+        /*For iPad*/
+    @media only screen 
+      and (min-device-width: 760px) 
+      and (max-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1){
+
+        body{
+          padding: 0.5rem;
+        }
+
+
+        header{
+          height: 50vh;
+        }
+
+        .logo{
+          top: 20%;
+        }
+
+        .heading-one{
+          letter-spacing: 1.5rem;
+          font-size: 4rem;
+        }
+
+        .heading-two, .heading-three{
+          letter-spacing: 0.5rem;
+        }
+
+        .space-top-section {
+          padding-top: 0.5rem;
+        }
+        
+        .content {
+          width: 45%;
+        }
+
+        .port-title {
+          padding: 2rem 0 0 4rem;
+        }
+
+        .project-label{
+          font-size: 2rem;
+          padding-top: 0.5rem;
+        }
+
+      }
+      /*For Nexus 5 and iPhone X*/
+    @media only screen 
+      and (min-device-width: 350px) 
+      and (max-device-width: 759px) {
+
+         body{
+          padding: 0.2rem;
+        }
+
+         header{
+          height: 40vh;
+        }
+
+        .space-top-section {
+          padding-top: 0.2rem;
+        }
+
+        .heading-one {
+          letter-spacing: 0.5rem;
+          font-size: 2rem;
+        }
+
+        .heading-two, .heading-three {
+          letter-spacing: 2px;
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+
+        .logo {
+          top: 20%;
+          left: 64%;
+          width: 15%;
+        }
+
+        .content{
+          width: 65%;
+        }
+
+        .project-label{
+          margin-bottom: 2rem;
+        }
+
+      }
+
+      
+    
+
+
+
+
+    
